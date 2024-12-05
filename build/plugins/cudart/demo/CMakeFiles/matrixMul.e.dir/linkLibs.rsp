@@ -1,1 +1,0 @@
-  -L/root/GVirtuS/lib  -lcudadevrt -lcudart 

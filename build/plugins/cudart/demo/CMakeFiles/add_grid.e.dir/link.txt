@@ -1,1 +1,0 @@
-/usr/bin/g++ @CMakeFiles/add_grid.e.dir/objects1.rsp -o add_grid.e @CMakeFiles/add_grid.e.dir/linkLibs.rsp -L"/usr/local/cuda-12.5/targets/x86_64-linux/lib/stubs" -L"/usr/local/cuda-12.5/targets/x86_64-linux/lib"

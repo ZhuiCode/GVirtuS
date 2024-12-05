@@ -1,1 +1,0 @@
--I/home/zjlab/project/GVirtuS/include -I/root/GVirtuS/include -I"/usr/local/cuda-12.5/targets/x86_64-linux/include" -I/home/zjlab/project/GVirtuS/plugins/cudart/util -I/home/zjlab/project/GVirtuS/plugins/cudart/3rdparty/include

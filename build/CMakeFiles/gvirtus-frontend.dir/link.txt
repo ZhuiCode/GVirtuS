@@ -1,1 +1,0 @@
-/usr/bin/g++ -fPIC  -DGVIRTUS_HOME=\"/root/GVirtuS\" -g -shared -Wl,-soname,libgvirtus-frontend.so -o libgvirtus-frontend.so "CMakeFiles/gvirtus-frontend.dir/src/frontend/Frontend.cpp.o"   -L/root/GVirtuS/lib  libgvirtus-communicators.so libgvirtus-common.so -lstdc++fs -ldl /usr/local/lib/liblog4cplus.so -lpthread

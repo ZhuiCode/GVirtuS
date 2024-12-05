@@ -1,1 +1,0 @@
-/usr/bin/g++ -fPIC  -DGVIRTUS_HOME=\"/root/GVirtuS\" -g -shared -Wl,-soname,libgvirtus-communicators-tcp.so -o libgvirtus-communicators-tcp.so "CMakeFiles/gvirtus-communicators-tcp.dir/src/communicators/tcp/TcpCommunicator.cpp.o"   -L/root/GVirtuS/lib  libgvirtus-communicators.so libgvirtus-common.so -lstdc++fs -ldl /usr/local/lib/liblog4cplus.so
