@@ -1,0 +1,205 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-2040c26a1672f91c719c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.27"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						3,
+						4,
+						5,
+						6,
+						7
+					]
+				},
+				{
+					"build" : "plugins/cudart",
+					"childIndexes" : 
+					[
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-plugins.cudart-Debug-3057405020e3c87416e1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.27"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "plugins/cudart",
+					"targetIndexes" : 
+					[
+						1,
+						8
+					]
+				},
+				{
+					"build" : "plugins/cudart/demo",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-plugins.cudart.demo-Debug-ebab5d189dc4b330dac5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.27"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "plugins/cudart/demo",
+					"targetIndexes" : 
+					[
+						0,
+						2,
+						9,
+						10
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "GVirtuS",
+					"targetIndexes" : 
+					[
+						3,
+						4,
+						5,
+						6,
+						7
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1,
+						2
+					],
+					"name" : "gvirtus-plugin-cudart",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						8,
+						9,
+						10
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 2,
+					"id" : "add_grid.e::@872b28004a884b6c0795",
+					"jsonFile" : "target-add_grid.e-Debug-091f702f589b593138e1.json",
+					"name" : "add_grid.e",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "cudart::@c19b2d1e3f606564756b",
+					"jsonFile" : "target-cudart-Debug-5d5b18f382e5d8219a58.json",
+					"name" : "cudart",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "dummy0.e::@872b28004a884b6c0795",
+					"jsonFile" : "target-dummy0.e-Debug-171dca3b814d1ff0e6c3.json",
+					"name" : "dummy0.e",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "gvirtus-backend::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-gvirtus-backend-Debug-fdf93ac2bae3a9dcfc2b.json",
+					"name" : "gvirtus-backend",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "gvirtus-common::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-gvirtus-common-Debug-6ed9d12d958fe5c9c31d.json",
+					"name" : "gvirtus-common",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "gvirtus-communicators::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-gvirtus-communicators-Debug-fdc918d9d4ae66cdf42e.json",
+					"name" : "gvirtus-communicators",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "gvirtus-communicators-tcp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-gvirtus-communicators-tcp-Debug-6c82bdeea770d3d38992.json",
+					"name" : "gvirtus-communicators-tcp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "gvirtus-frontend::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-gvirtus-frontend-Debug-de5574f5a8241d7547a8.json",
+					"name" : "gvirtus-frontend",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "gvirtus-plugin-cudart::@c19b2d1e3f606564756b",
+					"jsonFile" : "target-gvirtus-plugin-cudart-Debug-62a9300f661a517c34a3.json",
+					"name" : "gvirtus-plugin-cudart",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "launchKernel.e::@872b28004a884b6c0795",
+					"jsonFile" : "target-launchKernel.e-Debug-17fc33b30c6e2a17f5ef.json",
+					"name" : "launchKernel.e",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "matrixMul.e::@872b28004a884b6c0795",
+					"jsonFile" : "target-matrixMul.e-Debug-6883cf7a4d0aad092dfb.json",
+					"name" : "matrixMul.e",
+					"projectIndex" : 1
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/zjlab/project/GVirtuS/build",
+		"source" : "/home/zjlab/project/GVirtuS"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

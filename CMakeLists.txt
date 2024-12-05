@@ -25,7 +25,6 @@ add_library(gvirtus-common SHARED
         src/common/SignalState.cpp
         src/common/Util.cpp)
 
-#add_dependencies(gvirtus-common log4cplus)
 
 target_link_libraries(gvirtus-common stdc++fs ${CMAKE_DL_LIBS} ${LIBLOG4CPLUS})
 gvirtus_install_target(gvirtus-common)
