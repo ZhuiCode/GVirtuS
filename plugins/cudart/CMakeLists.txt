@@ -53,6 +53,8 @@ gvirtus_add_backend(cudart ${CUDAToolkit_VERSION}
         backend/CudaRtHandler_error.cpp
         backend/CudaRtHandler.cpp
         util/CudaUtil.cpp)
+
+message(STATUS "$$$$$$$$$$$$$$$ ${PROJECT_NAME}")
 target_link_libraries(${PROJECT_NAME} CUDA::cudart)
 
 

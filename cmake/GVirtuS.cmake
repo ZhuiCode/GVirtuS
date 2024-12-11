@@ -14,7 +14,9 @@ set(CMAKE_SKIP_RPATH ON)
 #include(ExternalProject)
 
 # Set the external install location
-#set(EXTERNAL_INSTALL_LOCATION ${CMAKE_CURRENT_BINARY_DIR}/external)
+set(EXTERNAL_INSTALL_LOCATION ${CMAKE_CURRENT_BINARY_DIR})
+
+file(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/lib)
 
 set(LIBLOG4CPLUS /usr/local/lib/liblog4cplus.so)
 
@@ -48,7 +50,6 @@ function(gvirtus_add_backend)
     endif()
     add_library(${PROJECT_NAME} SHARED
             ${ARGV})
-    message(STATUS "&&&&&& ${ARGV}")
     target_link_libraries(${PROJECT_NAME} ${LIBLOG4CPLUS} gvirtus-common gvirtus-communicators)
     install(TARGETS ${PROJECT_NAME}
             LIBRARY DESTINATION ${GVIRTUS_HOME}/lib)
@@ -64,7 +65,6 @@ function(gvirtus_add_frontend)
     list(GET ARGV 0 version)
     list(REMOVE_AT ARGV 0)
     add_library(${wrapped_library}  SHARED  ${ARGV})
-    message(STATUS "###### ${ARGV}")
     target_link_libraries(${wrapped_library} ${LIBLOG4CPLUS} gvirtus-common gvirtus-communicators gvirtus-frontend)
     set_target_properties(${wrapped_library} PROPERTIES VERSION ${version})
     string(REGEX REPLACE "\\..*" "" soversion ${version})

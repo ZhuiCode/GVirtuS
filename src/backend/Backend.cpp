@@ -29,7 +29,6 @@ Backend::Backend(const fs::path &path) {
 
     _properties = common::JSON<Property>(path).parser();
     _children.reserve(_properties.endpoints());
-
     if (_properties.endpoints() > 1) {
       LOG4CPLUS_INFO(logger, "🛈  - Application serves on "
                                  << _properties.endpoints()
@@ -53,29 +52,22 @@ Backend::Backend(const fs::path &path) {
 }
 
 void Backend::Start() {
-  // std::function<void(std::unique_ptr<gvirtus::Thread> & children)> task =
-  // [this](std::unique_ptr<gvirtus::Thread> &children) {
-  //   LOG4CPLUS_DEBUG(logger, "✓ - [Thread " << std::this_thread::get_id() <<
-  //   "]: Started."); children->Start(); LOG4CPLUS_DEBUG(logger, "✓ - [Thread "
-  //   << std::this_thread::get_id() << "]: Finished.");
-  // };
-
-  int pid = 0;
-  for (int i = 0; i < _children.size(); i++) {
-    if ((pid = fork()) == 0) {
-      _children[i]->Start();
-      break;
+    int pid = 0;
+    for (int i = 0; i < _children.size(); i++) {
+        if ((pid = fork()) == 0) {
+        _children[i]->Start();
+        break;
+        }
     }
-  }
 
-  if (pid != 0) {
-    signal(SIGINT, SIG_IGN);
-    signal(SIGHUP, SIG_IGN);
-    while (wait(nullptr) > 0)
-      ;
-  }
+    if (pid != 0) {
+        signal(SIGINT, SIG_IGN);
+        signal(SIGHUP, SIG_IGN);
+        while (wait(nullptr) > 0)
+        ;
+    }
 }
 
 void Backend::EventOccurred(std::string &event, void *object) {
-  LOG4CPLUS_DEBUG(logger, "✓ - EventOccurred: " << event);
+    LOG4CPLUS_DEBUG(logger, "✓ - EventOccurred: " << event);
 }

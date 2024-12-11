@@ -42,7 +42,7 @@ int main(int argc, char **argv) {
   logger = log4cplus::Logger::getInstance(LOG4CPLUS_TEXT("GVirtuS"));
 
   // Set the logging level
-  log4cplus::LogLevel logLevel = log4cplus::INFO_LOG_LEVEL;
+  log4cplus::LogLevel logLevel = log4cplus::ALL_LOG_LEVEL;
   std::string logLevelString = getEnvVar("GVIRTUS_LOGLEVEL");
   if (logLevelString != "") {
     logLevel = std::stoi(logLevelString);
